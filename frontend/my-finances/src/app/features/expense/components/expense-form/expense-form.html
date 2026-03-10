@@ -1,0 +1,27 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="form">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Descrição</mat-label>
+    <input matInput formControlName="description">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Categoria</mat-label>
+    <input matInput formControlName="category">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Valor</mat-label>
+    <input matInput type="number" formControlName="amount">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Data</mat-label>
+    <input matInput type="date" formControlName="date">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">
+    Adicionar
+  </button>
+
+</form>

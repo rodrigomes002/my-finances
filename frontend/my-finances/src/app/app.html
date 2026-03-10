@@ -6,7 +6,6 @@
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
-
   <mat-sidenav #sidenav
   [mode]="isMobile ? 'over' : 'side'"
   [opened]="!isMobile">
@@ -15,19 +14,25 @@
         <mat-icon matListItemIcon>dashboard</mat-icon>
         <span matListItemTitle>Dashboard</span>
       </a>
+      <a mat-list-item routerLink="/receitas" routerLinkActive="active">
+        <mat-icon matListItemIcon>attach_money</mat-icon>
+        <span matListItemTitle>Receitas</span>
+      </a>
+      <a mat-list-item routerLink="/despesas" routerLinkActive="active">
+        <mat-icon matListItemIcon>payments</mat-icon>
+        <span matListItemTitle>Despesas</span>
+      </a>
       <a mat-list-item routerLink="/usuarios" routerLinkActive="active">
         <mat-icon matListItemIcon>people</mat-icon>
         <span matListItemTitle>Usuários</span>
-      </a>    
-      <a mat-list-item routerLink="/configuracoes" routerLinkActive="active">
-        <mat-icon matListItemIcon>settings</mat-icon>
-        <span matListItemTitle>Configurações</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <router-outlet />
+    <div class="main-container">
+      <router-outlet />
+    </div>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
