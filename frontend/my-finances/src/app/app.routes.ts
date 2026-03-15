@@ -8,9 +8,15 @@ export const routes: Routes = [
             .then(m => m.Dashboard)
     },
     {
-        path: 'receitas',
+        path: 'despesas',
         loadComponent: () =>
         import('./features/expense/pages/expense-page/expense-page')
             .then(m => m.ExpensePage)
+    },
+    {
+        path: 'receitas',
+        loadComponent: () =>
+        import('./features/revenue/revenue-page')
+            .then(m => m.RevenuePage)
     }
 ];

@@ -21,12 +21,6 @@ export class ExpensesService {
     this._expenses.update(list => [...list, newExpense]);
   }
 
-  update(updated: Expense) {
-    this._expenses.update(list =>
-      list.map(e => e.id === updated.id ? updated : e)
-    );
-  }
-
   remove(id: string) {
     this._expenses.update(list =>
       list.filter(e => e.id !== id)
